@@ -1,0 +1,502 @@
+{
+  "summary": {
+    "label": "prompt-v2",
+    "n": 23,
+    "model": "qwen/qwen3.8-27b",
+    "prompt_version": "v2",
+    "retrieval_mode": "hybrid",
+    "top_k": 4,
+    "pass_rate": 0.565,
+    "metrics": {
+      "abstain": 0.5,
+      "citation": 1.0,
+      "completed": 0.609,
+      "keywords": 1.0,
+      "tool": 1.0
+    },
+    "avg_latency_ms": 26668,
+    "avg_tokens": 2001
+  },
+  "rows": [
+    {
+      "id": "q01",
+      "question": "What storage does the Free plan include?",
+      "answer": {
+        "answer": "The Free plan includes 5 GB of storage (for 1 user, with a maximum file size of 2 GB).",
+        "citations": [
+          {
+            "source": "01_getting_started.md",
+            "quote": "Free: 5 GB storage, 1 user, maximum file size 2 GB."
+          }
+        ],
+        "found_in_documents": true,
+        "confidence": "high"
+      },
+      "tools": [
+        "search_documents",
+        "search_documents",
+        "search_documents"
+      ],
+      "scores": {
+        "completed": 1.0,
+        "keywords": 1.0,
+        "citation": 1.0
+      },
+      "passed": true,
+      "latency_ms": 27769,
+      "tokens": 5202,
+      "cost_usd": null,
+      "trace_id": "421cbfc7a4184827622845ee171a0c60"
+    },
+    {
+      "id": "q02",
+      "question": "What is the maximum file size on the Pro plan?",
+      "error": "RateLimitError: Error code: 429 - Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m6eb67q2enmv8mz39jr2qeef` service tier `on_demand` on input tokens per minute (ITPM): Limit 7000, Used 6447, Requested 1598. Please try again in 8.957142857s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing",
+      "scores": {
+        "completed": 0.0
+      },
+      "passed": false
+    },
+    {
+      "id": "q03",
+      "question": "Which operating systems does the desktop app support?",
+      "answer": {
+        "answer": "The CloudSync desktop app supports macOS 12 or newer, Windows 10 or newer, and Ubuntu 22.04 or newer.",
+        "citations": [
+          {
+            "source": "01_getting_started.md",
+            "quote": "The desktop app supports macOS 12 or newer, Windows 10 or newer, and Ubuntu 22.04 or newer."
+          }
+        ],
+        "found_in_documents": true,
+        "confidence": "high"
+      },
+      "tools": [
+        "search_documents"
+      ],
+      "scores": {
+        "completed": 1.0,
+        "keywords": 1.0,
+        "citation": 1.0
+      },
+      "passed": true,
+      "latency_ms": 30106,
+      "tokens": 2646,
+      "cost_usd": null,
+      "trace_id": "f79348a90942788d7a7e6ce563e5d503"
+    },
+    {
+      "id": "q04",
+      "question": "If I cancel an annual plan 10 days after buying it, do I get my money back?",
+      "answer": {
+        "answer": "Yes. Annual plans receive a full refund if you cancel within 30 days of purchase, so cancelling 10 days after buying it qualifies. The refund is returned to your original payment method within 5-7 business days.",
+        "citations": [
+          {
+            "source": "02_billing_and_refunds.md",
+            "quote": "Annual plans receive a full refund if you cancel within 30 days of purchase."
+          },
+          {
+            "source": "02_billing_and_refunds.md",
+            "quote": "Approved refunds are returned to the original payment method within 5-7 business days."
+          }
+        ],
+        "found_in_documents": true,
+        "confidence": "high"
+      },
+      "tools": [
+        "search_documents"
+      ],
+      "scores": {
+        "completed": 1.0,
+        "keywords": 1.0,
+        "citation": 1.0
+      },
+      "passed": true,
+      "latency_ms": 39015,
+      "tokens": 2726,
+      "cost_usd": null,
+      "trace_id": "65dc7a763aff14e6440de4e720b45fc0"
+    },
+    {
+      "id": "q05",
+      "question": "How long does an approved refund take to arrive?",
+      "error": "RateLimitError: Error code: 429 - Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m6eb67q2enmv8mz39jr2qeef` service tier `on_demand` on input tokens per minute (ITPM): Limit 7000, Used 6894, Requested 1488. Please try again in 11.845714285s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing",
+      "scores": {
+        "completed": 0.0
+      },
+      "passed": false
+    },
+    {
+      "id": "q06",
+      "question": "After a failed payment, when does my account become read-only?",
+      "error": "RateLimitError: Error code: 429 - Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m6eb67q2enmv8mz39jr2qeef` service tier `on_demand` on input tokens per minute (ITPM): Limit 7000, Used 6865, Requested 1440. Please try again in 11.185714285s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing",
+      "scores": {
+        "completed": 0.0
+      },
+      "passed": false
+    },
+    {
+      "id": "q07",
+      "question": "What does error E-4021 mean?",
+      "answer": {
+        "answer": "E-4021 means \"Sync conflict\": the same file was changed on two devices before either change finished syncing. CloudSync keeps both versions, renaming the second one with the suffix \"(conflicted copy, device name)\". To resolve it, open the Conflict Resolver from the tray icon, compare the two versions, and choose Keep Both, Keep Local, or Keep Cloud.",
+        "citations": [
+          {
+            "source": "03_error_codes.md",
+            "quote": "The same file was changed on two devices before either change finished syncing. CloudSync keeps both versions."
+          }
+        ],
+        "found_in_documents": true,
+        "confidence": "high"
+      },
+      "tools": [
+        "search_documents"
+      ],
+      "scores": {
+        "completed": 1.0,
+        "keywords": 1.0,
+        "citation": 1.0
+      },
+      "passed": true,
+      "latency_ms": 31471,
+      "tokens": 2729,
+      "cost_usd": null,
+      "trace_id": "5833f459b707c1f39c9c11de1758a277"
+    },
+    {
+      "id": "q08",
+      "question": "I keep getting E-4032 when uploading. What should I do?",
+      "answer": {
+        "answer": "E-4032 means your account has used all of its storage. To fix it, free up space by emptying the trash, or upgrade to a plan with more storage. Uploads will resume automatically once space is available.",
+        "citations": [
+          {
+            "source": "03_error_codes.md",
+            "quote": "Your account has used all of its storage. Free up space by emptying the trash, or upgrade to a plan with more storage."
+          }
+        ],
+        "found_in_documents": true,
+        "confidence": "high"
+      },
+      "tools": [
+        "search_documents"
+      ],
+      "scores": {
+        "completed": 1.0,
+        "keywords": 1.0,
+        "citation": 1.0
+      },
+      "passed": true,
+      "latency_ms": 30896,
+      "tokens": 2693,
+      "cost_usd": null,
+      "trace_id": "3ca01f0c9a9097761251f448d4b9c2c5"
+    },
+    {
+      "id": "q09",
+      "question": "What does E-4107 mean and what is the limit?",
+      "error": "RateLimitError: Error code: 429 - Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m6eb67q2enmv8mz39jr2qeef` service tier `on_demand` on input tokens per minute (ITPM): Limit 7000, Used 6590, Requested 1398. Please try again in 8.468571428s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing",
+      "scores": {
+        "completed": 0.0
+      },
+      "passed": false
+    },
+    {
+      "id": "q10",
+      "question": "Which plan includes SAML single sign-on?",
+      "answer": {
+        "answer": "SAML 2.0 single sign-on is available on the Business plan only.",
+        "citations": [
+          {
+            "source": "04_security_and_sso.md",
+            "quote": "SAML 2.0 single sign-on is available on the Business plan only."
+          }
+        ],
+        "found_in_documents": true,
+        "confidence": "high"
+      },
+      "tools": [
+        "search_documents"
+      ],
+      "scores": {
+        "completed": 1.0,
+        "keywords": 1.0,
+        "citation": 1.0
+      },
+      "passed": true,
+      "latency_ms": 50686,
+      "tokens": 2554,
+      "cost_usd": null,
+      "trace_id": "4087344bb8a729a5e1a880fa4509586c"
+    },
+    {
+      "id": "q11",
+      "question": "How are files encrypted at rest?",
+      "error": "RateLimitError: Error code: 429 - Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m6eb67q2enmv8mz39jr2qeef` service tier `on_demand` on input tokens per minute (ITPM): Limit 7000, Used 6687, Requested 1355. Please try again in 8.931428571s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing",
+      "scores": {
+        "completed": 0.0
+      },
+      "passed": false
+    },
+    {
+      "id": "q12",
+      "question": "How long can I restore deleted files on the Pro plan?",
+      "answer": {
+        "answer": "On the Pro plan, deleted files stay in the trash and can be restored for 30 days. After that they are permanently deleted.",
+        "citations": [
+          {
+            "source": "04_security_and_sso.md",
+            "quote": "can be restored for 7 days on Free, 30 days on Pro, and 90 days on Business"
+          }
+        ],
+        "found_in_documents": true,
+        "confidence": "high"
+      },
+      "tools": [
+        "search_documents"
+      ],
+      "scores": {
+        "completed": 1.0,
+        "keywords": 1.0,
+        "citation": 1.0
+      },
+      "passed": true,
+      "latency_ms": 42391,
+      "tokens": 2621,
+      "cost_usd": null,
+      "trace_id": "1136cac6999c74b4a1dc1879b966643e"
+    },
+    {
+      "id": "q13",
+      "question": "How long are audit logs kept?",
+      "answer": {
+        "answer": "Audit logs are kept for 12 months. They are available on the Business plan only.",
+        "citations": [
+          {
+            "source": "04_security_and_sso.md",
+            "quote": "They are available on the Business plan only and are kept for 12 months."
+          }
+        ],
+        "found_in_documents": true,
+        "confidence": "high"
+      },
+      "tools": [
+        "search_documents"
+      ],
+      "scores": {
+        "completed": 1.0,
+        "keywords": 1.0,
+        "citation": 1.0
+      },
+      "passed": true,
+      "latency_ms": 63341,
+      "tokens": 2587,
+      "cost_usd": null,
+      "trace_id": "0f9dad8d44fa51fffb78012a6f00beb6"
+    },
+    {
+      "id": "q14",
+      "question": "What is the API rate limit on the Pro plan?",
+      "error": "RateLimitError: Error code: 429 - Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m6eb67q2enmv8mz39jr2qeef` service tier `on_demand` on input tokens per minute (ITPM): Limit 7000, Used 6632, Requested 1368. Please try again in 8.571428571s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing",
+      "scores": {
+        "completed": 0.0
+      },
+      "passed": false
+    },
+    {
+      "id": "q15",
+      "question": "What does the API return when I exceed the rate limit?",
+      "answer": {
+        "answer": "When you exceed the API rate limit, the API returns HTTP 429 with a Retry-After header indicating how many seconds to wait. Clients should back off and retry after that time.",
+        "citations": [
+          {
+            "source": "05_api_limits.md",
+            "quote": "When the limit is exceeded the API returns HTTP 429 with a Retry-After header that says how many seconds to wait."
+          }
+        ],
+        "found_in_documents": true,
+        "confidence": "high"
+      },
+      "tools": [
+        "search_documents"
+      ],
+      "scores": {
+        "completed": 1.0,
+        "keywords": 1.0,
+        "citation": 1.0
+      },
+      "passed": true,
+      "latency_ms": 40449,
+      "tokens": 2669,
+      "cost_usd": null,
+      "trace_id": "225f35d28a7a6e9c29c14d5240cfd082"
+    },
+    {
+      "id": "q16",
+      "question": "What is the largest file I can upload in one API request?",
+      "error": "RateLimitError: Error code: 429 - Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m6eb67q2enmv8mz39jr2qeef` service tier `on_demand` on input tokens per minute (ITPM): Limit 7000, Used 6913, Requested 1490. Please try again in 12.025714285s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing",
+      "scores": {
+        "completed": 0.0
+      },
+      "passed": false
+    },
+    {
+      "id": "q17",
+      "question": "How much would 8 users on the Pro plan cost for one year if billed annually?",
+      "error": "RateLimitError: Error code: 429 - Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m6eb67q2enmv8mz39jr2qeef` service tier `on_demand` on input tokens per minute (ITPM): Limit 7000, Used 6484, Requested 1535. Please try again in 8.734285714s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing",
+      "scores": {
+        "completed": 0.0
+      },
+      "passed": false
+    },
+    {
+      "id": "q18",
+      "question": "What is the total cost of 5 Business users on monthly billing for 6 months?",
+      "answer": {
+        "answer": "The total cost is $600. The Business plan is $20 per user per month when billed monthly, so 5 users \u00d7 $20 \u00d7 6 months = $600.",
+        "citations": [
+          {
+            "source": "01_getting_started.md",
+            "quote": "Business: ... Price is $20 per user per month when billed monthly"
+          }
+        ],
+        "found_in_documents": true,
+        "confidence": "high"
+      },
+      "tools": [
+        "search_documents",
+        "calculator"
+      ],
+      "scores": {
+        "completed": 1.0,
+        "keywords": 1.0,
+        "citation": 1.0,
+        "tool": 1.0
+      },
+      "passed": true,
+      "latency_ms": 48214,
+      "tokens": 4232,
+      "cost_usd": null,
+      "trace_id": "0e090b90a0ba844da8a85a7f9f6b56c5"
+    },
+    {
+      "id": "q19",
+      "question": "What is the status of ticket T-1003 and how was it resolved?",
+      "answer": {
+        "answer": "Ticket T-1003 (Fabrikam Inc, \"API returns 429 during nightly batch\", priority low, assigned to Dana) is resolved. It was resolved when the customer upgraded from the Free plan to Pro (600 requests per minute).",
+        "citations": [
+          {
+            "source": "ticket:T-1003",
+            "quote": "Resolved: customer upgraded from Free to Pro (600 requests per minute)."
+          }
+        ],
+        "found_in_documents": true,
+        "confidence": "high"
+      },
+      "tools": [
+        "calculator",
+        "lookup_ticket"
+      ],
+      "scores": {
+        "completed": 1.0,
+        "keywords": 1.0,
+        "citation": 1.0,
+        "tool": 1.0
+      },
+      "passed": true,
+      "latency_ms": 39137,
+      "tokens": 3735,
+      "cost_usd": null,
+      "trace_id": "070e9bc6c92f1bca6d5cf0d55969dd4a"
+    },
+    {
+      "id": "q20",
+      "question": "Ticket T-1002 mentions error E-4021. What is the recommended fix?",
+      "answer": {
+        "answer": "For error E-4021 (Sync conflict), the recommended fix is to open the Conflict Resolver from the tray icon, compare the two versions of the file, and choose one of: Keep Both, Keep Local, or Keep Cloud.",
+        "citations": [
+          {
+            "source": "03_error_codes.md",
+            "quote": "open the Conflict Resolver from the tray icon, compare the two versions, and choose Keep Both, Keep Local, or Keep Cloud"
+          }
+        ],
+        "found_in_documents": true,
+        "confidence": "high"
+      },
+      "tools": [
+        "lookup_ticket",
+        "search_documents"
+      ],
+      "scores": {
+        "completed": 1.0,
+        "keywords": 1.0,
+        "citation": 1.0,
+        "tool": 1.0
+      },
+      "passed": true,
+      "latency_ms": 39843,
+      "tokens": 2910,
+      "cost_usd": null,
+      "trace_id": "45f1cf1a4dfa3c4544b3fa7378424e30"
+    },
+    {
+      "id": "q21",
+      "question": "Can the customer in ticket T-1004 get EU data residency on their current plan?",
+      "error": "RateLimitError: Error code: 429 - Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m6eb67q2enmv8mz39jr2qeef` service tier `on_demand` on input tokens per minute (ITPM): Limit 7000, Used 6772, Requested 1540. Please try again in 11.245714285s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing",
+      "scores": {
+        "completed": 0.0
+      },
+      "passed": false
+    },
+    {
+      "id": "q22",
+      "question": "Does CloudSync have a Linux ARM build of the desktop app?",
+      "answer": {
+        "answer": "The documentation does not mention a Linux ARM build. It only states that the desktop app supports macOS 12 or newer, Windows 10 or newer, and Ubuntu 22.04 or newer, with no mention of ARM architecture support.",
+        "citations": [
+          {
+            "source": "01_getting_started.md",
+            "quote": "The desktop app supports macOS 12 or newer, Windows 10 or newer, and Ubuntu 22.04 or newer."
+          }
+        ],
+        "found_in_documents": false,
+        "confidence": "medium"
+      },
+      "tools": [
+        "search_documents",
+        "search_documents"
+      ],
+      "scores": {
+        "completed": 1.0,
+        "abstain": 0.0
+      },
+      "passed": false,
+      "latency_ms": 68258,
+      "tokens": 4295,
+      "cost_usd": null,
+      "trace_id": "219c696a4d62ce6afd633919abdf5cc9"
+    },
+    {
+      "id": "q23",
+      "question": "Who is the CEO of CloudSync?",
+      "answer": {
+        "answer": "I could not find information about the CEO of CloudSync in the available documentation.",
+        "citations": [],
+        "found_in_documents": false,
+        "confidence": "high"
+      },
+      "tools": [
+        "search_documents",
+        "search_documents"
+      ],
+      "scores": {
+        "completed": 1.0,
+        "abstain": 1.0
+      },
+      "passed": true,
+      "latency_ms": 61798,
+      "tokens": 4427,
+      "cost_usd": null,
+      "trace_id": "ab34cd7d4107b4b5d7d6b9abed5ea74e"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+services:
+  docqa:
+    build: .
+    env_file: .env          # keys come from your .env at runtime, never baked into the image
+    ports:
+      - "8000:8000"

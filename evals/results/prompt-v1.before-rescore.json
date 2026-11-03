@@ -1,0 +1,686 @@
+{
+  "summary": {
+    "label": "prompt-v1",
+    "n": 23,
+    "model": "qwen/qwen3.8-27b",
+    "prompt_version": "v1",
+    "retrieval_mode": "hybrid",
+    "top_k": 4,
+    "pass_rate": 0.957,
+    "metrics": {
+      "abstain": 0.5,
+      "citation": 1.0,
+      "completed": 1.0,
+      "keywords": 1.0,
+      "tool": 1.0
+    },
+    "avg_latency_ms": 23792,
+    "avg_tokens": 2526
+  },
+  "rows": [
+    {
+      "id": "q01",
+      "question": "What storage does the Free plan include?",
+      "answer": {
+        "answer": "The Free plan includes 5 GB of storage (with 1 user and a maximum file size of 2 GB).",
+        "citations": [
+          {
+            "source": "01_getting_started.md",
+            "quote": "Free: 5 GB storage, 1 user, maximum file size 2 GB."
+          }
+        ],
+        "found_in_documents": true,
+        "confidence": "high"
+      },
+      "tools": [
+        "search_documents"
+      ],
+      "scores": {
+        "completed": 1.0,
+        "keywords": 1.0,
+        "citation": 1.0
+      },
+      "passed": true,
+      "latency_ms": 2526,
+      "tokens": 2261,
+      "cost_usd": null,
+      "trace_id": "e04c45bdb9826723fb299ca913c26195"
+    },
+    {
+      "id": "q02",
+      "question": "What is the maximum file size on the Pro plan?",
+      "answer": {
+        "answer": "The maximum file size on the Pro plan is 50 GB.",
+        "citations": [
+          {
+            "source": "01_getting_started.md",
+            "quote": "Pro: 2 TB storage, up to 10 users, maximum file size 50 GB."
+          }
+        ],
+        "found_in_documents": true,
+        "confidence": "high"
+      },
+      "tools": [
+        "search_documents"
+      ],
+      "scores": {
+        "completed": 1.0,
+        "keywords": 1.0,
+        "citation": 1.0
+      },
+      "passed": true,
+      "latency_ms": 2149,
+      "tokens": 2278,
+      "cost_usd": null,
+      "trace_id": "d4e0e7ef6d10cc29948157442bcc065d"
+    },
+    {
+      "id": "q03",
+      "question": "Which operating systems does the desktop app support?",
+      "answer": {
+        "answer": "The CloudSync desktop app supports macOS 12 or newer, Windows 10 or newer, and Ubuntu 22.04 or newer.",
+        "citations": [
+          {
+            "source": "01_getting_started.md",
+            "quote": "The desktop app supports macOS 12 or newer, Windows 10 or newer, and Ubuntu 22.04 or newer."
+          }
+        ],
+        "found_in_documents": true,
+        "confidence": "high"
+      },
+      "tools": [
+        "search_documents"
+      ],
+      "scores": {
+        "completed": 1.0,
+        "keywords": 1.0,
+        "citation": 1.0
+      },
+      "passed": true,
+      "latency_ms": 32461,
+      "tokens": 2230,
+      "cost_usd": null,
+      "trace_id": "46e2e5b41f0bca22dc3c8c99f356dbc6"
+    },
+    {
+      "id": "q04",
+      "question": "If I cancel an annual plan 10 days after buying it, do I get my money back?",
+      "answer": {
+        "answer": "Yes. Annual plans receive a full refund if you cancel within 30 days of purchase, so cancelling 10 days after buying it qualifies. The refund is returned to your original payment method within 5-7 business days.",
+        "citations": [
+          {
+            "source": "02_billing_and_refunds.md",
+            "quote": "Annual plans receive a full refund if you cancel within 30 days of purchase."
+          },
+          {
+            "source": "02_billing_and_refunds.md",
+            "quote": "Approved refunds are returned to the original payment method within 5-7 business days."
+          }
+        ],
+        "found_in_documents": true,
+        "confidence": "high"
+      },
+      "tools": [
+        "search_documents"
+      ],
+      "scores": {
+        "completed": 1.0,
+        "keywords": 1.0,
+        "citation": 1.0
+      },
+      "passed": true,
+      "latency_ms": 2446,
+      "tokens": 2306,
+      "cost_usd": null,
+      "trace_id": "50197580cf579e14ca5117dc33b2cfb4"
+    },
+    {
+      "id": "q05",
+      "question": "How long does an approved refund take to arrive?",
+      "answer": {
+        "answer": "An approved refund is returned to your original payment method within 5-7 business days.",
+        "citations": [
+          {
+            "source": "02_billing_and_refunds.md",
+            "quote": "Approved refunds are returned to the original payment method within 5-7 business days."
+          }
+        ],
+        "found_in_documents": true,
+        "confidence": "high"
+      },
+      "tools": [
+        "search_documents"
+      ],
+      "scores": {
+        "completed": 1.0,
+        "keywords": 1.0,
+        "citation": 1.0
+      },
+      "passed": true,
+      "latency_ms": 15754,
+      "tokens": 2305,
+      "cost_usd": null,
+      "trace_id": "e805bd87c9868d73eb104543db699b68"
+    },
+    {
+      "id": "q06",
+      "question": "After a failed payment, when does my account become read-only?",
+      "answer": {
+        "answer": "If a payment fails, CloudSync retries on day 1, day 3, and day 7. If the payment still fails after those retries, your account becomes read-only after day 14. Your files remain safe and downloadable while the account is read-only, and updating your payment method restores full access immediately.",
+        "citations": [
+          {
+            "source": "02_billing_and_refunds.md",
+            "quote": "If the payment still fails, the account becomes read-only after day 14."
+          }
+        ],
+        "found_in_documents": true,
+        "confidence": "high"
+      },
+      "tools": [
+        "search_documents"
+      ],
+      "scores": {
+        "completed": 1.0,
+        "keywords": 1.0,
+        "citation": 1.0
+      },
+      "passed": true,
+      "latency_ms": 25919,
+      "tokens": 2304,
+      "cost_usd": null,
+      "trace_id": "866c4ff755e419dc4de9115d6054220d"
+    },
+    {
+      "id": "q07",
+      "question": "What does error E-4021 mean?",
+      "answer": {
+        "answer": "Error E-4021 means \"Sync conflict\": the same file was changed on two devices before either change finished syncing. CloudSync keeps both versions, and the second one is renamed with the suffix \"(conflicted copy, device name)\". To resolve it, open the Conflict Resolver from the tray icon, compare the two versions, and choose Keep Both, Keep Local, or Keep Cloud.",
+        "citations": [
+          {
+            "source": "03_error_codes.md",
+            "quote": "E-4021: Sync conflict \u2014 The same file was changed on two devices before either change finished syncing."
+          }
+        ],
+        "found_in_documents": true,
+        "confidence": "high"
+      },
+      "tools": [
+        "search_documents"
+      ],
+      "scores": {
+        "completed": 1.0,
+        "keywords": 1.0,
+        "citation": 1.0
+      },
+      "passed": true,
+      "latency_ms": 25098,
+      "tokens": 2320,
+      "cost_usd": null,
+      "trace_id": "bd36bd70eb2d24907aa95c4b44c7f8aa"
+    },
+    {
+      "id": "q08",
+      "question": "I keep getting E-4032 when uploading. What should I do?",
+      "answer": {
+        "answer": "E-4032 means your CloudSync storage quota is exceeded \u2014 your account has used all of its available storage. To fix it: (1) Free up space by emptying the trash, or (2) upgrade to a plan with more storage. Once space is available, your uploads will resume automatically.",
+        "citations": [
+          {
+            "source": "03_error_codes.md",
+            "quote": "E-4032: Storage quota exceeded. Your account has used all of its storage. Free up space by emptying the trash, or upgrade to a plan with more storage."
+          }
+        ],
+        "found_in_documents": true,
+        "confidence": "high"
+      },
+      "tools": [
+        "search_documents"
+      ],
+      "scores": {
+        "completed": 1.0,
+        "keywords": 1.0,
+        "citation": 1.0
+      },
+      "passed": true,
+      "latency_ms": 25384,
+      "tokens": 2304,
+      "cost_usd": null,
+      "trace_id": "c812941c537a0a40800be996c4eddc41"
+    },
+    {
+      "id": "q09",
+      "question": "What does E-4107 mean and what is the limit?",
+      "answer": {
+        "answer": "E-4107 means \"File path too long.\" On Windows, a file path longer than 260 characters cannot be synced. To fix it, shorten the folder or file names, or move the folder closer to the drive root.",
+        "citations": [
+          {
+            "source": "03_error_codes.md",
+            "quote": "On Windows, a file path longer than 260 characters cannot be synced."
+          }
+        ],
+        "found_in_documents": true,
+        "confidence": "high"
+      },
+      "tools": [
+        "search_documents"
+      ],
+      "scores": {
+        "completed": 1.0,
+        "keywords": 1.0,
+        "citation": 1.0
+      },
+      "passed": true,
+      "latency_ms": 17744,
+      "tokens": 2264,
+      "cost_usd": null,
+      "trace_id": "d8df78389c38936c6ef8deb2bdb62c38"
+    },
+    {
+      "id": "q10",
+      "question": "Which plan includes SAML single sign-on?",
+      "answer": {
+        "answer": "SAML 2.0 single sign-on is available on the Business plan only.",
+        "citations": [
+          {
+            "source": "04_security_and_sso.md",
+            "quote": "SAML 2.0 single sign-on is available on the Business plan only."
+          }
+        ],
+        "found_in_documents": true,
+        "confidence": "high"
+      },
+      "tools": [
+        "search_documents"
+      ],
+      "scores": {
+        "completed": 1.0,
+        "keywords": 1.0,
+        "citation": 1.0
+      },
+      "passed": true,
+      "latency_ms": 36520,
+      "tokens": 2138,
+      "cost_usd": null,
+      "trace_id": "cd876176b1c5a0791c2b705fefebbad8"
+    },
+    {
+      "id": "q11",
+      "question": "How are files encrypted at rest?",
+      "answer": {
+        "answer": "Files are encrypted with AES-256 at rest (and with TLS 1.3 in transit).",
+        "citations": [
+          {
+            "source": "04_security_and_sso.md",
+            "quote": "Files are encrypted with AES-256 at rest and with TLS 1.3 in transit."
+          }
+        ],
+        "found_in_documents": true,
+        "confidence": "high"
+      },
+      "tools": [
+        "search_documents"
+      ],
+      "scores": {
+        "completed": 1.0,
+        "keywords": 1.0,
+        "citation": 1.0
+      },
+      "passed": true,
+      "latency_ms": 42181,
+      "tokens": 2161,
+      "cost_usd": null,
+      "trace_id": "b962f3328760a6b6890bfc387efcb707"
+    },
+    {
+      "id": "q12",
+      "question": "How long can I restore deleted files on the Pro plan?",
+      "answer": {
+        "answer": "On the Pro plan, deleted files stay in the trash and can be restored for 30 days. After that, they are permanently deleted.",
+        "citations": [
+          {
+            "source": "04_security_and_sso.md",
+            "quote": "Deleted files stay in the trash and can be restored for 7 days on Free, 30 days on Pro, and 90 days on Business."
+          }
+        ],
+        "found_in_documents": true,
+        "confidence": "high"
+      },
+      "tools": [
+        "search_documents"
+      ],
+      "scores": {
+        "completed": 1.0,
+        "keywords": 1.0,
+        "citation": 1.0
+      },
+      "passed": true,
+      "latency_ms": 16954,
+      "tokens": 2213,
+      "cost_usd": null,
+      "trace_id": "5bdbbb6ca4018d24b87ca3a70adc18d9"
+    },
+    {
+      "id": "q13",
+      "question": "How long are audit logs kept?",
+      "answer": {
+        "answer": "Audit logs are kept for 12 months. Note that audit logs are only available on the Business plan.",
+        "citations": [
+          {
+            "source": "04_security_and_sso.md",
+            "quote": "Audit logs record sign-ins, sharing changes and admin actions. They are available on the Business plan only and are kept for 12 months."
+          }
+        ],
+        "found_in_documents": true,
+        "confidence": "high"
+      },
+      "tools": [
+        "search_documents"
+      ],
+      "scores": {
+        "completed": 1.0,
+        "keywords": 1.0,
+        "citation": 1.0
+      },
+      "passed": true,
+      "latency_ms": 27282,
+      "tokens": 2186,
+      "cost_usd": null,
+      "trace_id": "ef6655b41bf43ce6ef724cabe91d8a85"
+    },
+    {
+      "id": "q14",
+      "question": "What is the API rate limit on the Pro plan?",
+      "answer": {
+        "answer": "The Pro plan allows 600 API requests per minute. If you exceed this limit, the API returns HTTP 429 with a Retry-After header indicating how many seconds to wait before retrying.",
+        "citations": [
+          {
+            "source": "05_api_limits.md",
+            "quote": "600 requests per minute on Pro"
+          }
+        ],
+        "found_in_documents": true,
+        "confidence": "high"
+      },
+      "tools": [
+        "search_documents"
+      ],
+      "scores": {
+        "completed": 1.0,
+        "keywords": 1.0,
+        "citation": 1.0
+      },
+      "passed": true,
+      "latency_ms": 27140,
+      "tokens": 2198,
+      "cost_usd": null,
+      "trace_id": "8c0983e5ab310113f870f3b5ce3224cf"
+    },
+    {
+      "id": "q15",
+      "question": "What does the API return when I exceed the rate limit?",
+      "answer": {
+        "answer": "When you exceed the API rate limit, the API returns HTTP 429 (Too Many Requests) along with a Retry-After header indicating how many seconds to wait. Your client should back off and retry after that time. For reference, the limits are 60 requests/minute on Free, 600 on Pro, and 3000 on Business.",
+        "citations": [
+          {
+            "source": "05_api_limits.md",
+            "quote": "When the limit is exceeded the API returns HTTP 429 with a Retry-After header that says how many seconds to wait."
+          }
+        ],
+        "found_in_documents": true,
+        "confidence": "high"
+      },
+      "tools": [
+        "search_documents"
+      ],
+      "scores": {
+        "completed": 1.0,
+        "keywords": 1.0,
+        "citation": 1.0
+      },
+      "passed": true,
+      "latency_ms": 18613,
+      "tokens": 2291,
+      "cost_usd": null,
+      "trace_id": "332eb3b77a28b2ac3f25ad857d5fe4d7"
+    },
+    {
+      "id": "q16",
+      "question": "What is the largest file I can upload in one API request?",
+      "answer": {
+        "answer": "A single upload API request can carry at most 5 GB. For larger files, you must use multipart upload with chunks of 64 MB. (Note: the maximum total file size also depends on your plan \u2014 Free: 2 GB, Pro/Business: 50 GB.)",
+        "citations": [
+          {
+            "source": "05_api_limits.md",
+            "quote": "A single upload request can carry at most 5 GB. Larger files must use multipart upload with chunks of 64 MB."
+          },
+          {
+            "source": "01_getting_started.md",
+            "quote": "Free: 5 GB storage, 1 user, maximum file size 2 GB. Pro: ... maximum file size 50 GB."
+          }
+        ],
+        "found_in_documents": true,
+        "confidence": "high"
+      },
+      "tools": [
+        "search_documents"
+      ],
+      "scores": {
+        "completed": 1.0,
+        "keywords": 1.0,
+        "citation": 1.0
+      },
+      "passed": true,
+      "latency_ms": 17875,
+      "tokens": 2402,
+      "cost_usd": null,
+      "trace_id": "d8055e0aa0bd98b9a8411d03bf54d593"
+    },
+    {
+      "id": "q17",
+      "question": "How much would 8 users on the Pro plan cost for one year if billed annually?",
+      "answer": {
+        "answer": "8 users on the Pro plan billed annually would cost $960 per year (8 users \u00d7 $10/user/month \u00d7 12 months).",
+        "citations": [
+          {
+            "source": "01_getting_started.md",
+            "quote": "Pro: ... Price is $12 per user per month when billed monthly, or $10 per user per month when billed annually."
+          }
+        ],
+        "found_in_documents": true,
+        "confidence": "high"
+      },
+      "tools": [
+        "search_documents",
+        "calculator"
+      ],
+      "scores": {
+        "completed": 1.0,
+        "keywords": 1.0,
+        "citation": 1.0,
+        "tool": 1.0
+      },
+      "passed": true,
+      "latency_ms": 52286,
+      "tokens": 3693,
+      "cost_usd": null,
+      "trace_id": "8abeb3bb368b103e3e73c932ecb21311"
+    },
+    {
+      "id": "q18",
+      "question": "What is the total cost of 5 Business users on monthly billing for 6 months?",
+      "answer": {
+        "answer": "The total cost is $600. The Business plan is $20 per user per month when billed monthly, so 5 users \u00d7 $20 \u00d7 6 months = $600.",
+        "citations": [
+          {
+            "source": "01_getting_started.md",
+            "quote": "Business: ... Price is $20 per user per month when billed monthly"
+          }
+        ],
+        "found_in_documents": true,
+        "confidence": "high"
+      },
+      "tools": [
+        "search_documents",
+        "calculator"
+      ],
+      "scores": {
+        "completed": 1.0,
+        "keywords": 1.0,
+        "citation": 1.0,
+        "tool": 1.0
+      },
+      "passed": true,
+      "latency_ms": 29276,
+      "tokens": 3608,
+      "cost_usd": null,
+      "trace_id": "38951416f12175632232c0c414c1faf9"
+    },
+    {
+      "id": "q19",
+      "question": "What is the status of ticket T-1003 and how was it resolved?",
+      "answer": {
+        "answer": "Ticket T-1003 (Fabrikam Inc, \"API returns 429 during nightly batch\") is resolved. It was resolved by the customer upgrading from the Free plan to the Pro plan, which raised their API limit to 600 requests per minute. Priority: low, assignee: Dana.",
+        "citations": [
+          {
+            "source": "ticket:T-1003",
+            "quote": "Resolved: customer upgraded from Free to Pro (600 requests per minute)."
+          }
+        ],
+        "found_in_documents": true,
+        "confidence": "high"
+      },
+      "tools": [
+        "lookup_ticket"
+      ],
+      "scores": {
+        "completed": 1.0,
+        "keywords": 1.0,
+        "citation": 1.0,
+        "tool": 1.0
+      },
+      "passed": true,
+      "latency_ms": 16378,
+      "tokens": 2094,
+      "cost_usd": null,
+      "trace_id": "944ecbf6a4311aa7f3c676d4cf5a7adb"
+    },
+    {
+      "id": "q20",
+      "question": "Ticket T-1002 mentions error E-4021. What is the recommended fix?",
+      "answer": {
+        "answer": "Error E-4021 is a sync conflict: the same file was changed on two devices before either change finished syncing, so CloudSync keeps both versions and renames the second one with a \"(conflicted copy, device name)\" suffix. The recommended fix is to open the Conflict Resolver from the tray icon, compare the two versions, and choose Keep Both, Keep Local, or Keep Cloud.",
+        "citations": [
+          {
+            "source": "03_error_codes.md",
+            "quote": "To fix it, open the Conflict Resolver from the tray icon, compare the two versions, and choose Keep Both, Keep Local, or Keep Cloud."
+          },
+          {
+            "source": "ticket:T-1002",
+            "quote": "Files duplicated with (conflicted copy) suffix, error E-4021"
+          }
+        ],
+        "found_in_documents": true,
+        "confidence": "high"
+      },
+      "tools": [
+        "lookup_ticket",
+        "search_documents"
+      ],
+      "scores": {
+        "completed": 1.0,
+        "keywords": 1.0,
+        "citation": 1.0,
+        "tool": 1.0
+      },
+      "passed": true,
+      "latency_ms": 20068,
+      "tokens": 2536,
+      "cost_usd": null,
+      "trace_id": "4bb35db8ac6d6a10667c9193cab032d9"
+    },
+    {
+      "id": "q21",
+      "question": "Can the customer in ticket T-1004 get EU data residency on their current plan?",
+      "answer": {
+        "answer": "No. The customer in ticket T-1004 (Adventure Works) is currently on the Pro plan, and EU data residency is only available on the Business plan. Pro plan data is stored in the US. To get EU data residency (Frankfurt), they would need to upgrade to the Business plan.",
+        "citations": [
+          {
+            "source": "04_security_and_sso.md",
+            "quote": "Business plan customers can choose to store data in the US or in the EU (Frankfurt). Free and Pro plans store data in the US."
+          },
+          {
+            "source": "ticket:T-1004",
+            "quote": "Customer is currently on the Pro plan."
+          }
+        ],
+        "found_in_documents": true,
+        "confidence": "high"
+      },
+      "tools": [
+        "lookup_ticket",
+        "search_documents"
+      ],
+      "scores": {
+        "completed": 1.0,
+        "keywords": 1.0,
+        "citation": 1.0,
+        "tool": 1.0
+      },
+      "passed": true,
+      "latency_ms": 19040,
+      "tokens": 2478,
+      "cost_usd": null,
+      "trace_id": "2c06c3551762ad2d01f200b0408c3241"
+    },
+    {
+      "id": "q22",
+      "question": "Does CloudSync have a Linux ARM build of the desktop app?",
+      "answer": {
+        "answer": "The documentation doesn't mention a Linux ARM build. It only states that the desktop app supports macOS 12 or newer, Windows 10 or newer, and Ubuntu 22.04 or newer \u2014 with no mention of ARM architecture support. So based on the available docs, there is no documented Linux ARM build of the desktop app.",
+        "citations": [
+          {
+            "source": "01_getting_started.md",
+            "quote": "The desktop app supports macOS 12 or newer, Windows 10 or newer, and Ubuntu 22.04 or newer."
+          }
+        ],
+        "found_in_documents": false,
+        "confidence": "medium"
+      },
+      "tools": [
+        "search_documents",
+        "search_documents"
+      ],
+      "scores": {
+        "completed": 1.0,
+        "abstain": 0.0
+      },
+      "passed": false,
+      "latency_ms": 28881,
+      "tokens": 3690,
+      "cost_usd": null,
+      "trace_id": "ec4abc731968ffcd5d20aba251a5845a"
+    },
+    {
+      "id": "q23",
+      "question": "Who is the CEO of CloudSync?",
+      "answer": {
+        "answer": "I'm sorry, but I don't have information about who the CEO of CloudSync is. Our product documentation covers plans, pricing, billing, error codes, and how to use the service, but it doesn't include details about the company's leadership team. I'd recommend checking CloudSync's official website or contacting their support team for that information.",
+        "citations": [],
+        "found_in_documents": false,
+        "confidence": "high"
+      },
+      "tools": [
+        "search_documents",
+        "search_documents"
+      ],
+      "scores": {
+        "completed": 1.0,
+        "abstain": 1.0
+      },
+      "passed": true,
+      "latency_ms": 45260,
+      "tokens": 3857,
+      "cost_usd": null,
+      "trace_id": "ba6064f818176ac8725a1f667bc613ff"
+    }
+  ]
+}
